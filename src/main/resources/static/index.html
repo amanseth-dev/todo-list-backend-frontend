@@ -213,7 +213,7 @@
         // when the HTML is not served from 'http://localhost:8083'
         // (e.g., when run as a 'file://' or 'blob:').
         // Using the full URL is more robust for all execution environments.
-        const API_URL = 'http://localhost:8083/api/todos';
+        const API_URL = 'https://todo-list-backend-frontend.onrender.com'; // 'http://localhost:8083/api/todos';
 
         // --- API Functions ---
 
@@ -237,7 +237,8 @@
                 // Log the full error object for more details
                 console.error('Full error object while fetching todos:', error);
                 // Updated error message.
-                showMessage('Error: Failed to fetch tasks. Please make sure the Java Spring Boot backend is running on http://localhost:8083.', 'error');
+                showMessage('Error: Failed to fetch tasks. Please make sure the Java Spring Boot backend is running', 'error');
+                // showMessage('Error: Failed to fetch tasks. Please make sure the Java Spring Boot backend is running on http://localhost:8083.', 'error');
             }
         }
 
